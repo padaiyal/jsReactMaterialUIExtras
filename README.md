@@ -56,7 +56,13 @@ Describe the project.
 
 <!-- USAGE -->
 ## Usage
-Specify the steps to set up and use the project.
+
+### AppFooter
+
+A footer containing copyright text and a link to a contact form.
+```
+<AppFooter copyRightText={'Company Name © ' + (new Date().getFullYear()).toString()} contactText='Contact Us' contactLink='contact-us'/>
+```
 
 <!-- ROADMAP -->
 ## Roadmap

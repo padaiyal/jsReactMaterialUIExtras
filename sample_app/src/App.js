@@ -1,28 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import AppFooter from './AppFooter';
+import Home from './Home';
+import { BrowserRouter, Route } from 'react-router-dom';
+
 
 /**
- * Sample React app page with a 'learn react' link.
+ * Sample React app with routes to components and a footer.
  */
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+    render() {
+        return (
+        <div>
+            <BrowserRouter>
+                <Route exact path="/" component={Home}/>
+
+                {/*You can add a component to this route.*/}
+                <AppFooter copyRightText={'Company Name © ' + (new Date().getFullYear()).toString()} contactText='Contact Us' contactLink='contact-us'/>
+            </BrowserRouter>    
+        </div>
+        
+        )
+    }
+
 }
 
-export default App;
+export default App
+

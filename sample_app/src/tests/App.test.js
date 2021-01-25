@@ -7,6 +7,10 @@ test('renders learn react link', () => {
     render(<App />);
 
     // Expects that the 'learn react' link element is displayed
-    const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
+    const learnLinkElement = screen.getByText(/learn react/i);
+    expect(learnLinkElement).toBeInTheDocument();
+
+    // Expects that the 'Contact Us' link element is displayed
+    const contactLinkElement = screen.getByText(/contact us/i);
+    expect(contactLinkElement).toBeInTheDocument();
 });
