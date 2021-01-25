@@ -1,0 +1,13 @@
+.Footer {
+  background-color: #e2e2e2;
+  padding: 20px;
+}
+
+.ContactGrid {
+  margin-left: auto;
+}
+
+.ContactLink {
+  text-decoration: none;
+  color: black;
+}
