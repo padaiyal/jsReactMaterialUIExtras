@@ -57,8 +57,42 @@ Describe the project.
 <!-- USAGE -->
 ## Usage
 
-### AppFooter
+### NavBar
+A navigation bar containing a logo and tabs.
+```
+this.state = {
+    tabs: [
+        {
+            1: {
+                title: "Tab One",
+                link: "tab-one"
+            }   
+        },
+        {
+            2: {
+                title: "Tab Two",
+                link: "tab-two"
+            }   
+        },
+        {
+            3: {
+                title: "Tab Three",
+                link: "tab-three"
+            }    
+        },
+        {
+            4: {
+                title: "Tab Four",
+                link: "tab-four"
+            }    
+        }
+    ]
+}
 
+<NavBar companyLogo={companyLogo} tabs={this.state.tabs}/>
+```
+
+### AppFooter
 A footer containing copyright text and a link to a contact form.
 ```
 <AppFooter copyRightText={'Company Name © ' + (new Date().getFullYear()).toString()} contactText='Contact Us' contactLink='contact-us'/>
