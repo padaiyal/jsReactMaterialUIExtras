@@ -98,6 +98,41 @@ A footer containing copyright text and a link to a contact form.
 <AppFooter copyRightText={'Company Name © ' + (new Date().getFullYear()).toString()} contactText='Contact Us' contactLink='contact-us'/>
 ```
 
+### HealthStatus
+A component that displays the status of services used by the web application.
+```
+this.state = {
+    services: [
+        {
+            1: {
+                name: "Service One",
+                status: true
+            }   
+        },
+        {
+            2: {
+                name: "Service Two",
+                status: true
+            }   
+        },
+        {
+            3: {
+                name: "Service Three",
+                status: false
+            }    
+        },
+        {
+            4: {
+                name: "Service Four",
+                status: true
+            }    
+        }
+    ]
+}
+
+<HealthStatus services={this.state.services} height={500} width={500}/>
+```
+
 <!-- ROADMAP -->
 ## Roadmap
 See the [open issues](https://github.com/padaiyal/jsReactNpmProjectTemplate/issues) for a list of proposed features (and known issues).
